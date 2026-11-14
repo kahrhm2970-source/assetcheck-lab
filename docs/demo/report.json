@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "expected_rows": 4,
+    "observed_rows": 5,
+    "ambiguous_ids": 1,
+    "matched_assets": 1,
+    "findings": 4
+  },
+  "findings": [
+    {
+      "code": "DUPLICATE_ID",
+      "asset_id": "LAB-4",
+      "evidence": "Expected rows=1; observed rows=2",
+      "next_step": "Verify physical labels and source rows; this ID is excluded from other comparisons."
+    },
+    {
+      "code": "NOT_OBSERVED",
+      "asset_id": "LAB-3",
+      "evidence": "Present in register only",
+      "next_step": "Recheck inventory scope and authorized movement records; absence is not proof of loss."
+    },
+    {
+      "code": "UNREGISTERED",
+      "asset_id": "LAB-5",
+      "evidence": "Present in observation only",
+      "next_step": "Verify source register and approved acquisition before updating records."
+    },
+    {
+      "code": "DETAIL_MISMATCH",
+      "asset_id": "LAB-2",
+      "evidence": "location: ZONE-1 -> ZONE-3",
+      "next_step": "Confirm device type and approved movement; do not overwrite the register automatically."
+    }
+  ]
+}
